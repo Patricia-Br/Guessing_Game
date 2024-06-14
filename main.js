@@ -1,4 +1,4 @@
-// variaveis
+// variables
 const btnTry = document.querySelector('#btnTry')
 const btnReset = document.querySelector('#btnReset')
 const screen1 = document.querySelector('.screen1')
@@ -6,7 +6,7 @@ const screen2 = document.querySelector('.screen2')
 let randomNumber = Math.round(Math.random() * 10)
 let xAttempts = 1
 
-// Eventos
+// Events
 btnTry.addEventListener('click', handleTryClick)
 btnReset.addEventListener('click', handleResetClick)
 document.addEventListener('keydown', function(e){
@@ -15,7 +15,7 @@ document.addEventListener('keydown', function(e){
   }
 })
   
-// funções callback
+// functions callback
 function handleTryClick(event) {
   event.preventDefault()
 
@@ -23,7 +23,7 @@ function handleTryClick(event) {
 
   if (Number(inputNumber.value) == randomNumber) {
     toggleScreen()
-    screen2.querySelector('h2').innerText = `acertou em ${xAttempts} tentativas`
+    screen2.querySelector('h2').innerText = `you got it in ${xAttempts} attempts`
   }
 
   inputNumber.value = ''
